@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace CookingBook.Pages
 {
     /// <summary>
@@ -37,7 +38,7 @@ namespace CookingBook.Pages
                 else
                 {
                     MessageBox.Show("Здравствуйте, Автор " + userObj.AuthorName + "!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-
+                    NavigationService.Navigate(new RecipesPage());
                 }
 
             }
