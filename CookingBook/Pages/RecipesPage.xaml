@@ -6,15 +6,45 @@
       xmlns:local="clr-namespace:CookingBook.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="RecipesPage">
+      Title="Рецепты">
 
-    <Grid>
-        <DataGrid x:Name="dgRecipes" AutoGenerateColumns="False" Margin="10">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Название" Binding="{Binding RecipeName}" Width="*"/>
-                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="*"/>
-                <DataGridTextColumn Header="Время приготовления" Binding="{Binding CookingTime}" Width="*"/>
-            </DataGrid.Columns>
-        </DataGrid>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Список рецептов" 
+                   FontSize="16" 
+                   FontWeight="Bold" 
+                   Margin="10" 
+                   HorizontalAlignment="Center"/>
+
+        <ListView x:Name="lvRecipes" 
+                  Grid.Row="1"
+                  Margin="10"
+                  Background="#FFC0CB"
+                  BorderBrush="#FF69B4">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Название" 
+                                    DisplayMemberBinding="{Binding RecipeName}" 
+                                    Width="120"/>
+                    <GridViewColumn Header="Описание" 
+                                    DisplayMemberBinding="{Binding Description}" 
+                                    Width="250"/>
+                    <GridViewColumn Header="Время приготовления (мин)" 
+                                    DisplayMemberBinding="{Binding CookingTime}" 
+                                    Width="150"/>
+                </GridView>
+            </ListView.View>
+            
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Background" Value="#FF69B4"/>
+                    <Setter Property="Margin" Value="0,2"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
     </Grid>
 </Page>

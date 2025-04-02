@@ -25,7 +25,7 @@ namespace CookingBook.Pages
 
         private void LoadRecipes()
         {
-            dgRecipes.ItemsSource = AppData.AppConnect.model01.Recipes.ToList();
+            lvRecipes.ItemsSource = AppData.AppConnect.model01.Recipes.ToList();
         }
     }
 }

@@ -11,12 +11,20 @@
     <Grid x:Name="Register" Margin="0,0,0,-17">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFFFFF"/>
-                <GradientStop Color="#FFFFFF" Offset="1"/>
+                <GradientStop Color="#EE82EE"/>
+                <GradientStop Color="#8B008B" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Button x:Name="btnReg" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="273,377,0,0" VerticalAlignment="Top" Width="264" RenderTransformOrigin="0.887,-0.509" Height="29" Click="btnReg_Click"/>
-        <Button x:Name="btnBack" Content="Назад" HorizontalAlignment="Left" Margin="273,411,0,0" VerticalAlignment="Top" Width="264" Height="28"/>
+        <Button x:Name="btnBack" 
+        Content="Назад" 
+        HorizontalAlignment="Left" 
+        Margin="273,411,0,0" 
+        VerticalAlignment="Top" 
+        Width="264" 
+        Height="28"
+        Click="btnBack_Click"/>
+        <!-- Добавлено событие Click -->
         <TextBox x:Name="tbLogin" HorizontalAlignment="Left" Margin="273,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264"/>
         <PasswordBox x:Name="tbPass" HorizontalAlignment="Left" Margin="273,162,0,0" VerticalAlignment="Top" Width="264"/>
         <TextBox x:Name="tbFio" HorizontalAlignment="Left" Margin="273,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" RenderTransformOrigin="0.484,-0.269"/>

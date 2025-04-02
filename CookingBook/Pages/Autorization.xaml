@@ -11,8 +11,8 @@
     <Grid x:Name="frmAu" HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Height="450">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFFFFF"/>
-                <GradientStop Color="#FFFFFF" Offset="1"/>
+                <GradientStop Color="#FFA07A"/>
+                <GradientStop Color="#FF7F50" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
         <GroupBox Header="Введите данные" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Height="196" Width="212" Margin="268,88,0,0"/>
